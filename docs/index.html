@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ECG in your browser — PTB-XL 1D-CNN</title>
+  <meta name="description" content="A 12-lead ECG classifier that runs entirely in your browser (ONNX Runtime Web). Nothing is uploaded.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <h1>ECG in your browser</h1>
+  <p class="sub">A small 1D-CNN trained on PTB-XL reads a 12-lead ECG and estimates five diagnostic superclasses.
+    It runs <b>entirely on this device</b> with ONNX Runtime Web. No file ever leaves your computer.</p>
+</header>
+
+<main>
+  <section class="panel controls">
+    <label for="sample">Example ECG (PTB-XL test set)</label>
+    <select id="sample"></select>
+
+    <div class="or">or</div>
+
+    <label for="file">Your own ECG (CSV: 12 columns = leads I, II, III, aVR, aVL, aVF, V1–V6; one row per sample)</label>
+    <input id="file" type="file" accept=".csv,.txt,.tsv">
+    <div class="row">
+      <label for="fs">Sampling rate</label>
+      <select id="fs"><option value="100">100 Hz</option><option value="250">250 Hz</option>
+        <option value="360">360 Hz</option><option value="500" selected>500 Hz</option><option value="1000">1000 Hz</option></select>
+    </div>
+    <p class="hint">10 seconds are used (centre). Values in mV or µV (detected automatically).</p>
+    <p id="status" class="status">Loading model…</p>
+  </section>
+
+  <section class="panel result">
+    <h2>Model output</h2>
+    <div id="bars"></div>
+    <p id="truth" class="truth"></p>
+    <p class="hint">A filled bar crosses the class threshold (chosen on the validation fold for best F1).
+      More than one class can be present.</p>
+  </section>
+
+  <section class="panel wide">
+    <h2>Signal</h2>
+    <canvas id="ecg" width="1200" height="720"></canvas>
+  </section>
+
+  <section class="panel wide about">
+    <h2>About the model</h2>
+    <div id="about"></div>
+  </section>
+</main>
+
+<footer>
+  Data: <a href="https://physionet.org/content/ptb-xl/1.0.3/">PTB-XL v1.0.3</a> (Wagner et al., <i>Scientific Data</i> 2020), CC BY 4.0.
+  Code: MIT. <b>Research demo. Not a medical device and not for diagnosis.</b>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/onnxruntime-web@1.29.0/dist/ort.min.js"></script>
+<script src="ecg.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

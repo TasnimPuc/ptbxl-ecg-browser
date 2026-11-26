@@ -1,0 +1,14 @@
+# PTB-XL is open data (CC BY 4.0): trained weights, ONNX and demo examples MAY be committed (models/, docs/)
+*.npz
+*.zip
+*.dat
+*.hea
+data/
+__pycache__/
+.ipynb_checkpoints/
+.pytest_cache/
+.env
+node_modules/
+notebooks/*.ipynb
+!notebooks/kaggle_run.ipynb
+!notebooks/kaggle_run_executed.ipynb

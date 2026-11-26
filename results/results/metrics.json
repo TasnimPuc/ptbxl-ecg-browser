@@ -1,0 +1,152 @@
+{
+ "records": 21799,
+ "split": [
+  {
+   "part": "train",
+   "records": 17084,
+   "NORM": 7596,
+   "MI": 4379,
+   "STTC": 4186,
+   "CD": 3907,
+   "HYP": 2119
+  },
+  {
+   "part": "val",
+   "records": 2146,
+   "NORM": 955,
+   "MI": 540,
+   "STTC": 528,
+   "CD": 495,
+   "HYP": 268
+  },
+  {
+   "part": "test",
+   "records": 2158,
+   "NORM": 963,
+   "MI": 550,
+   "STTC": 521,
+   "CD": 496,
+   "HYP": 262
+  }
+ ],
+ "params": 87653,
+ "macro_auroc": 0.9258389749457777,
+ "macro_auroc_ci": [
+  0.9180197234233304,
+  0.9324842446298228
+ ],
+ "best_epoch": 39,
+ "per_class": [
+  {
+   "cls": "NORM",
+   "name": "Normal ECG",
+   "n": 2158,
+   "positives": 963,
+   "auroc": 0.9466294746629476,
+   "auprc": 0.9272422185155617,
+   "threshold": 0.7462036410967509,
+   "f1": 0.858739837398374,
+   "sensitivity": 0.877466251298027,
+   "specificity": 0.8661087866108786
+  },
+  {
+   "cls": "MI",
+   "name": "Myocardial infarction",
+   "n": 2158,
+   "positives": 550,
+   "auroc": 0.9238297150610584,
+   "auprc": 0.8360567515479027,
+   "threshold": 0.23979507883389772,
+   "f1": 0.7387717690192483,
+   "sensitivity": 0.7327272727272728,
+   "specificity": 0.914179104477612
+  },
+  {
+   "cls": "STTC",
+   "name": "ST/T change",
+   "n": 2158,
+   "positives": 521,
+   "auroc": 0.9384917168595237,
+   "auprc": 0.8404388926015554,
+   "threshold": 0.3648529127240179,
+   "f1": 0.7763636363636364,
+   "sensitivity": 0.8195777351247601,
+   "specificity": 0.9071472205253512
+  },
+  {
+   "cls": "CD",
+   "name": "Conduction disturbance",
+   "n": 2158,
+   "positives": 496,
+   "auroc": 0.9222868386320406,
+   "auprc": 0.8500186033852187,
+   "threshold": 0.41586831212043746,
+   "f1": 0.7592592592592593,
+   "sensitivity": 0.7439516129032258,
+   "specificity": 0.9356197352587244
+  },
+  {
+   "cls": "HYP",
+   "name": "Hypertrophy",
+   "n": 2158,
+   "positives": 262,
+   "auroc": 0.8979571295133184,
+   "auprc": 0.6523460554409543,
+   "threshold": 0.2140338838100429,
+   "f1": 0.594306049822064,
+   "sensitivity": 0.6374045801526718,
+   "specificity": 0.9298523206751055
+  }
+ ],
+ "onnx": {
+  "max_abs_diff": 3.8743019104003906e-07,
+  "cpu_ms_per_ecg": 0.77,
+  "onnx_kb": 345.8
+ },
+ "runtime_min": 4.4,
+ "config": {
+  "data_dir": "",
+  "download_url": "https://physionet.org/content/ptb-xl/get-zip/1.0.3/",
+  "sampling_rate": 100,
+  "task": "superdiagnostic",
+  "train_folds": [
+   1,
+   2,
+   3,
+   4,
+   5,
+   6,
+   7,
+   8
+  ],
+  "val_fold": 9,
+  "test_fold": 10,
+  "seed": 42,
+  "widths": [
+   32,
+   64,
+   96,
+   128
+  ],
+  "kernel": 7,
+  "dropout": 0.2,
+  "batch_size": 128,
+  "lr": 0.003,
+  "epochs": 60,
+  "patience": 10,
+  "augment": true,
+  "n_boot": 500,
+  "demo_per_class": 3,
+  "opset": 17,
+  "work_dir": "/kaggle/working/ecg",
+  "cache_dir": "/tmp/ecg_cache",
+  "project_id": "mimic-cxr-training",
+  "bucket": "mimic-cxr-training-mimic-ckpt",
+  "bucket_location": "US",
+  "gcs_prefix": "ptbxl-ecg-browser",
+  "run_name": "main",
+  "local_store": "",
+  "ckpt_every_min": 5.0,
+  "device": ""
+ }
+}

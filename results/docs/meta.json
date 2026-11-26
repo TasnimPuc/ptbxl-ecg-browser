@@ -1,0 +1,113 @@
+{
+ "classes": [
+  "NORM",
+  "MI",
+  "STTC",
+  "CD",
+  "HYP"
+ ],
+ "names": [
+  "Normal ECG",
+  "Myocardial infarction",
+  "ST/T change",
+  "Conduction disturbance",
+  "Hypertrophy"
+ ],
+ "thresholds": [
+  0.7462,
+  0.2398,
+  0.3649,
+  0.4159,
+  0.214
+ ],
+ "leads": [
+  "I",
+  "II",
+  "III",
+  "AVR",
+  "AVL",
+  "AVF",
+  "V1",
+  "V2",
+  "V3",
+  "V4",
+  "V5",
+  "V6"
+ ],
+ "fs": 100,
+ "n_samples": 1000,
+ "test": {
+  "macro_auroc": 0.9258389749457777,
+  "macro_auroc_ci": [
+   0.9180197234233304,
+   0.9324842446298228
+  ],
+  "per_class": [
+   {
+    "cls": "NORM",
+    "name": "Normal ECG",
+    "n": 2158,
+    "positives": 963,
+    "auroc": 0.9466,
+    "auprc": 0.9272,
+    "threshold": 0.7462,
+    "f1": 0.8587,
+    "sensitivity": 0.8775,
+    "specificity": 0.8661
+   },
+   {
+    "cls": "MI",
+    "name": "Myocardial infarction",
+    "n": 2158,
+    "positives": 550,
+    "auroc": 0.9238,
+    "auprc": 0.8361,
+    "threshold": 0.2398,
+    "f1": 0.7388,
+    "sensitivity": 0.7327,
+    "specificity": 0.9142
+   },
+   {
+    "cls": "STTC",
+    "name": "ST/T change",
+    "n": 2158,
+    "positives": 521,
+    "auroc": 0.9385,
+    "auprc": 0.8404,
+    "threshold": 0.3649,
+    "f1": 0.7764,
+    "sensitivity": 0.8196,
+    "specificity": 0.9071
+   },
+   {
+    "cls": "CD",
+    "name": "Conduction disturbance",
+    "n": 2158,
+    "positives": 496,
+    "auroc": 0.9223,
+    "auprc": 0.85,
+    "threshold": 0.4159,
+    "f1": 0.7593,
+    "sensitivity": 0.744,
+    "specificity": 0.9356
+   },
+   {
+    "cls": "HYP",
+    "name": "Hypertrophy",
+    "n": 2158,
+    "positives": 262,
+    "auroc": 0.898,
+    "auprc": 0.6523,
+    "threshold": 0.214,
+    "f1": 0.5943,
+    "sensitivity": 0.6374,
+    "specificity": 0.9299
+   }
+  ]
+ },
+ "model": {
+  "params": 87653,
+  "onnx_kb": 345.8
+ },
+ "source": "PTB-XL v1.0.3 (Wagner et al., 2020/2022), CC BY 4.0"
+}
