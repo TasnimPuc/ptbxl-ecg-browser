@@ -1,0 +1,25 @@
+name: repo-health
+on:
+  schedule: [{cron: "23 3 * * 1"}]
+  workflow_dispatch: {}
+permissions:
+  contents: write
+  issues: read
+  pull-requests: read
+  actions: read
+jobs:
+  health:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - id: health
+        uses: TasnimPuc/github-repo-health-analyzer@main
+        with:
+          output-dir: .github/health
+      - name: commit report + badge
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add .github/health
+          git diff --cached --quiet || git commit -m "chore: repo health ${{ steps.health.outputs.score }}/100"
+          git push
