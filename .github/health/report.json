@@ -1,0 +1,130 @@
+{
+  "metrics": {
+    "repo": "TasnimPuc/ptbxl-ecg-browser",
+    "url": "https://github.com/TasnimPuc/ptbxl-ecg-browser",
+    "generated": "2026-11-27T16:48Z",
+    "window_days": 90,
+    "description": "Lightweight 1D-CNN for 12-lead ECG (PTB-XL, 5 diagnostic superclasses) exported to ONNX and running fully in the browser on GitHub Pages \u2014 no server.",
+    "topics": [
+      "1d-cnn",
+      "deep-learning",
+      "ecg",
+      "github-pages",
+      "healthcare-ai",
+      "onnx",
+      "onnxruntime-web",
+      "ptb-xl",
+      "pytorch",
+      "tinyml",
+      "webassembly"
+    ],
+    "archived": false,
+    "fork": false,
+    "language": "Jupyter Notebook",
+    "license": "MIT",
+    "stars": 0,
+    "forks": 0,
+    "created": "2026-11-26T16:05:40Z",
+    "pushed": "2026-11-27T16:47:55Z",
+    "days_since_push": 0.0,
+    "commits_window": 4,
+    "commits_year": 4,
+    "commits_capped": false,
+    "authors_window": 1,
+    "authors_year": 1,
+    "bus_factor": 1,
+    "top_authors": [
+      [
+        "tasnimpuc",
+        4
+      ]
+    ],
+    "community": {
+      "readme": true,
+      "license": true,
+      "contributing": false,
+      "code_of_conduct": false,
+      "issue_template": false,
+      "pull_request_template": false,
+      "security_policy": false
+    },
+    "community_health_pct": 42,
+    "dependency_bot": null,
+    "open_issues": 0,
+    "open_prs": 0,
+    "stale_issues": 0,
+    "new_issues": 0,
+    "closed_issues": 0,
+    "merged_prs": 0,
+    "median_issue_close_days": null,
+    "median_pr_merge_days": null,
+    "workflows": 3,
+    "ci_runs": 5,
+    "ci_success_rate": 1.0,
+    "releases": 0,
+    "last_release": null,
+    "days_since_release": null,
+    "median_release_gap_days": null,
+    "api_calls": 21
+  },
+  "health": {
+    "score": 52,
+    "grade": "D",
+    "parts": {
+      "activity": {
+        "score": 18.4,
+        "max": 25
+      },
+      "community": {
+        "score": 10.0,
+        "max": 20
+      },
+      "responsiveness": {
+        "score": 10.0,
+        "max": 20
+      },
+      "ci": {
+        "score": 12.0,
+        "max": 15
+      },
+      "releases": {
+        "score": 0.0,
+        "max": 10
+      },
+      "bus_factor": {
+        "score": 2.0,
+        "max": 10
+      }
+    },
+    "findings": [
+      {
+        "severity": "low",
+        "text": "Missing contributing."
+      },
+      {
+        "severity": "low",
+        "text": "Missing code of conduct."
+      },
+      {
+        "severity": "low",
+        "text": "Missing issue template."
+      },
+      {
+        "severity": "low",
+        "text": "Missing pull request template."
+      },
+      {
+        "severity": "low",
+        "text": "Missing security policy."
+      },
+      {
+        "severity": "low",
+        "text": "No Dependabot/Renovate config for dependency updates."
+      },
+      {
+        "severity": "low",
+        "text": "No GitHub releases - tag versions so users can pin."
+      }
+    ]
+  }
+}
