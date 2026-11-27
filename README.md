@@ -1,5 +1,7 @@
 # ECG in your Browser — PTB-XL 1D-CNN → ONNX 🫀
 
+![repo health](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/TasnimPuc/bd-rooftop-solar-calculator/main/.github/health/badge.json)
+
 A small 1D-CNN reads a **12-lead ECG** and estimates five diagnostic superclasses: **NORM, MI, STTC, CD, HYP**.
 It runs **entirely in the browser** on GitHub Pages with ONNX Runtime Web. There is no server, and no ECG ever
 leaves the visitor's computer.
